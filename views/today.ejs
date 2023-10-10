@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+    
+    <div class="heading">
+        <h1><%= currentDate %></h1>
+    </div>
+    
+    
+        <% for(let i=0; i < locals.dataOfTask.length ; i++){ %>
+            <ul>
+                <div class="taskbox text-button">
+                    <input type="checkbox" name="taskCompleted" label="taskCompleted">
+                    <li><%= dataOfTask[i] %></li>
+                </div>
+            </ul>
+        <% } %>
+
+        <form action="/" method="POST">
+            <div class="text-button">
+            <input class="taskbox" type="text" name="task"  label="task" placeholder="Enter the task here" autocomplete="off">
+            <button class="taskButton" type="submit">+</button>
+            </div>
+        </form>
+        
+    
+<%- include("partials/footer.ejs") %>
