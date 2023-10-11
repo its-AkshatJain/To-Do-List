@@ -75,6 +75,11 @@ li > a:hover{
     display:flex;
 }
 
+input:checked + li {
+    text-decoration: line-through;
+    text-decoration-color: #CD5C08;
+}
+
 .taskButton{
     border-radius:50%;
     background-color:#CD5C08;
