@@ -5,19 +5,28 @@
     </div>
     
     
-        <% for(let i=0; i < locals.dataOfTask.length ; i++){ %>
-            <ul>
-                <div class="taskbox text-button">
-                    <input type="checkbox" name="taskCompleted" label="taskCompleted">
-                    <li><%= dataOfTask[i] %></li>
-                </div>
-            </ul>
-        <% } %>
+    <!-- <=% for(let i=0; i < locals.dataOfTask.length ; i++){ %>
+        <ul>
+            <div class="taskbox text-button">
+                <input type="checkbox" name="taskCompleted" label="taskCompleted">
+                <li><= dataOfTask[i].name %></li>
+            </div>
+        </ul>
+    <=% } %> -->
 
+        <% locals.dataOfTask.forEach((task)=>{ %>
+            <form action="/delete" method="POST">
+                <div class="taskbox text-button">
+                    <input type="checkbox" onChange="this.form.submit()" value="<%= task._id %>" name="taskCompleted" label="taskCompleted">
+                    <li><%= task.name %></li>
+                </div>
+                <input type="hidden" name="list" value="<%= currentDate %>"></input>
+            </form>
+        <% }) %>
         <form action="/" method="POST">
             <div class="text-button">
-            <input class="taskbox" type="text" name="task"  label="task" placeholder="Enter the task here" autocomplete="off">
-            <button class="taskButton" type="submit">+</button>
+            <input class="taskbox" type="text" name="newItem" placeholder="Enter the task here" autocomplete="off">
+            <button class="taskButton" type="submit" name="list" value="<%= currentDate %>">+</button>
             </div>
         </form>
         

@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+
+        <!-- <=% if (locals.newListItem && locals.newListItem.length) { %> -->
+        <% locals.newListItem.forEach((item)=>{ %>
+            <form action="/delete" method="POST">
+                <div class="taskbox text-button">
+                    <input type="checkbox" onChange="this.form.submit()" value="<%= item._id %>" name="taskCompleted" label="taskCompleted">
+                    <li><%= item.name %></li>
+                </div>
+                <input type="hidden" name="list" value="<%= listTitle %>"></input>
+            </form>
+        <% }) %>
+        <!-- <=% } %>  -->
+        
+        
+        <form action="/" method="POST">
+            <div class="text-button">
+            <input class="taskbox" type="text" name="newItem" placeholder="Enter your task here" autocomplete="off">
+            <button class="taskButton" type="submit" name="list" value="<%= listTitle %>">+</button>
+            </div>
+        </form>
+        
+   
+    
+
+<%- include("partials/footer.ejs") %>

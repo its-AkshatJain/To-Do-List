@@ -81,13 +81,18 @@ input:checked + li {
 }
 
 .taskButton{
-    border-radius:50%;
+    border-radius:10px;
     background-color:#CD5C08;
     color:white;
-    padding: 3%;
+    padding: 0.5rem 1rem;
     margin-top:5px;
     font-size:2rem;
     font-weight: bold;
+    /* box-shadow: 2px 2px lightsalmon; */
+}
+
+.taskButton:hover{
+    background-color:lightsalmon;
 }
 
 .text-button{
