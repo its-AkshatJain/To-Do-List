@@ -15,8 +15,14 @@ Certainly! Here's a more detailed instruction for your README file:
 
    ```bash
    npm install
+   ```
+   **or**
+   ```bash
    npm install express
    npm install body-parser
+   npm install mongoose
+   npm install mongodb
+   npm install lodash
    ```
 
 3. **Run the Application:**
@@ -35,8 +41,8 @@ Certainly! Here's a more detailed instruction for your README file:
    ```
 
 5. **Start Managing Your Tasks:**
-   - You can now use the web app to manage your tasks efficiently, with separate pages for "Today" and "Work" tasks.
+   - You can now use the web app to manage your tasks efficiently, with separate pages for different types of tasks. Easily switch between them by changing the website endpoint .
 
 Enjoy a more organized and productive day with our To-Do List web app! If you have any questions or feedback, feel free to reach out.
 
-**Note:** Ensure that you have Node.js and NPM (Node Package Manager) installed on your computer before following these instructions. You can download them from [nodejs.org](https://nodejs.org/).
+**Note:** Ensure that you have Node.js, NPM (Node Package Manager) installed on your computer before following these instructions. You can download them from [nodejs.org](https://nodejs.org/).
